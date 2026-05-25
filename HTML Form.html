@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Form</title>
+        <h1 align="center">Form</h1>
+    </head>
+    <body>
+        <form action="https://google.com" method="POST" autocomplete="on">
+            
+
+            <fieldset>
+                <label> First Name: </label>
+            <input type="text" name="fname" placeholder="Enter your first name" id="fname">
+            <br>
+            <br>
+            <label> Last Name: </label>
+            <input type="text" name="lname" placeholder="Enter your last name" id="lname">
+            <br>
+            <br>
+            <label> Date of Birth: </label>
+            <input type="date" name="dob">
+            <br>
+            <br>
+            <label> Phone Number: </label>
+            <input type="phone" name="phone" placeholder="Enter your phone number">
+            <br>
+            <br>
+            <label> Email: </label>
+            <input type="email" name="email" placeholder="Enter your email">
+            <br>
+            <br>
+            <label> Password: </label>
+            <input type="password" name="password" placeholder="Enter your password">
+            <br>
+            <br>
+            <label> Choose your age range: </label>
+            <select name="age-range">
+                <option value=""> Select an option </option>
+                <option value="0-18">0-18 years</option>
+                <option value="19-30">19-30 years</option>
+                <option value="31-50">31-50 years</option>
+                <option value="51+">51+ years</option>
+            </select>
+            <br>
+            <br>
+            <label> Age: </label>
+            <input type="number" name="age" placeholder="Enter your age">
+            <br>
+            <br>
+            <input type="radio" value="male" name="gender">
+            <label> Male </label>
+            <br>
+            <input type="radio" value="female" name="gender">
+            <label> Female </label>
+
+            <br>
+            <br>
+
+            <label> Message: </label>
+            <textarea name="message" cols="40" rows="5" placeholder="Enter your message"></textarea>
+
+            <br>
+            <br>
+            
+            <label> Newsletter: </label>
+            <input type="checkbox" name="newsletter" value="yes">
+            <br>
+            <br>
+            <input type="file"  >
+
+            <br>
+            <br>
+
+            <input type="submit" name="Submit" value="Submit">
+            <input type="reset" name="Reset" value="Reset">
+            </fieldset>
+        </form>
+    </body>
