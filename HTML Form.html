@@ -96,11 +96,61 @@
             <input type="checkbox" name="newsletter" value="yes">
             <br>
             <br>
-            <input type="file"  >
+            <input type="file">
 
             <br>
             <br>
-
+            
+            <!-- Address -->
+            <label>Address:</label>
+            <textarea name="address" rows="3" cols="40"
+            placeholder="Enter your address"></textarea>
+            
+            <br>
+            <br>
+            
+            <!-- Country -->
+            <label>Country:</label>
+            <select name="country">
+                <option value="">Select Country</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="India">India</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Nepal">Nepal</option>
+            </select>
+            
+            <br>
+            <br>
+            
+            <!-- Favorite Color -->
+            <label>Favorite Color:</label>
+            <input type="color" name="color">
+            
+            <br>
+            <br>
+            
+            <!-- Website -->
+            <label>Website:</label>
+            <input type="url" name="website"
+            placeholder="https://example.com">
+            
+            <br>
+            <br>
+            
+            <!-- Satisfaction Level -->
+            <label>Satisfaction Level:</label>
+            <input type="range" name="rating" min="1" max="10">
+            
+            <br>
+            <br>
+            
+            <!-- Terms and Conditions -->
+            <input type="checkbox" name="terms" required>
+            <label>I agree to the Terms & Conditions</label>
+            
+            <br>
+            <br>
+            
             <input type="submit" name="Submit" id="submit" value="Submit">
             <input type="reset" name="Reset" id="reset" value="Reset">
             </fieldset>
