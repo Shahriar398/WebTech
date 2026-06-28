@@ -1,0 +1,85 @@
+<!doctype html>
+	<html>
+		<head>
+			<title>Library Membership Application </title>
+			<link rel="stylesheet" href="Membership Form.css">
+		</head>
+		
+		<body>
+			<h1> Membership Form </h1>
+			
+			<div class="form-frame">
+			<form>
+				<label for = "name"> Name: </label>
+				<input type ="text" name="name" id= "name" required>
+				<br>
+				<br>
+				
+				<label for = "id"> Membership Id: </label>
+				<input type ="text" name="id" id= "id" required>
+				<br>
+				<br>
+				
+				<label for = "email"> Email address: </label>
+				<input type ="text" name="email" id= "email" required>
+				<br>
+				<br>
+				
+				<label for = "password"> Password: </label>
+				<input type ="password" name="password" id= "password" required>
+				<br>
+				<br>
+				
+				<label for="doj">Date of join :</label>
+				<input type="Date" name="doj" id="doj">
+				<br>
+				<br>
+				
+				<label for="image">Upload Student Id : </label>
+				<input type="file" name="photo" id="photo">
+				<br>
+				<br>
+				
+				
+				<label for="reading_hours">Reading Hours per day:</label>
+				<input type="number" name="reading_hours" id="reading_hours" min="0" step="1">
+				<br>
+				<br>
+
+				<label for="gender">Gender:</label>
+				<input type="radio" name="gender" id="gender" value = "Male">Male
+				<input type="radio" name="gender" id="gender" value = "Male">Female
+				<br>
+				<br>
+				
+				<label for="type">Member Type:</label>
+					
+						<input type="checkbox" id="student">
+						<label for="student"> Student</label>
+						
+						<input type="checkbox" id="student">
+						<label for="faculty"> Faculty</label>
+						
+						<input type="checkbox" id="student">
+						<label for="external"> External Member</label>
+				<br>
+				<br>
+				
+				<label for="Preffered section">Preffered Books:</label>
+				<select name="Preffered section">
+				<option > Choose option</option>
+					 <option value="fiction"> Fiction</option>
+					 <option value="nonfiction"  > Non- Fiction</option>
+				</select>
+				<br><br>
+				
+				<label for= "Address "> Additional notes: </label>
+				<textarea col="5" rows ="10" > </textarea>
+				<br>
+				<br>
+		
+				<input type = "submit" value="Apply">
+				<input type = "reset" value="Reset">
+				
+			</form>
+			</div>
