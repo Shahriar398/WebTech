@@ -1,73 +1,120 @@
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f2f2f2;
-    padding-bottom:70px;
+    background:#eef2f7;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
 }
 
 header{
-    background:#0077cc;
+    background:#0d6efd;
     color:white;
     text-align:center;
     padding:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
 }
 
-main{
+.container{
+    flex:1;
     display:flex;
-    justify-content:space-around;
-    margin:30px;
+    justify-content:center;
     gap:30px;
+    flex-wrap:wrap;
+    padding:35px;
 }
 
-fieldset{
-    width:45%;
-    padding:20px;
+.card{
+    width:430px;
     background:white;
-    border:2px solid #0077cc;
+    border:2px solid #0d6efd;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
 
 legend{
+    padding:0 10px;
     font-weight:bold;
-    font-size:18px;
+    color:#0d6efd;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+.info-row,
+.result{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
 }
 
 input,
 select{
     width:100%;
-    padding:8px;
-    margin-top:8px;
-    margin-bottom:15px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+}
+
+.checkbox{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:20px;
+}
+
+.checkbox input{
+    width:auto;
 }
 
 button{
-    padding:10px 25px;
-    background:#0077cc;
-    color:white;
-    border:none;
-    cursor:pointer;
     display:none;
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    background:#198754;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
 }
 
 button:hover{
-    background:#005999;
+    background:#157347;
 }
 
 .error{
     color:red;
     font-weight:bold;
+    margin-top:10px;
 }
 
 .discount{
     color:green;
     font-weight:bold;
+    margin-top:10px;
 }
 
 footer{
     position:fixed;
     bottom:0;
-    left:0;
     width:100%;
-    background:#333;
+    background:#222;
     color:white;
     text-align:center;
     padding:15px;
