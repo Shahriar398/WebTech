@@ -1,9 +1,10 @@
-const seatPrice = 1000;
-const discountLimit = 5000;
+const PRICE_PER_SEAT = 1000;
+const DISCOUNT_LIMIT = 5000;
 
-const seatQty = document.getElementById("seatQty");
+const seatInput = document.getElementById("seatQty");
 const courseTotal = document.getElementById("courseTotal");
 const finalAmount = document.getElementById("finalAmount");
+
 const classType = document.getElementById("classType");
 
 const errorMsg = document.getElementById("errorMsg");
@@ -12,57 +13,38 @@ const discountMsg = document.getElementById("discountMsg");
 const checkbox = document.getElementById("confirm");
 const submitBtn = document.getElementById("submitBtn");
 
-function calculateTotal() {
+function calculateFee() {
 
-    let qty = parseInt(seatQty.value);
+    let seats = Number(seatInput.value);
 
-    if(qty <= 0 || isNaN(qty))
-    {
-        errorMsg.innerHTML = "Quantity cannot be zero or negative.";
-        qty = 1;
-        seatQty.value = 1;
-    }
-    else
-    {
-        errorMsg.innerHTML = "";
+    if (seats < 1 || isNaN(seats)) {
+        errorMsg.textContent = "Seat quantity must be at least 1.";
+        seats = 1;
+        seatInput.value = 1;
+    } else {
+        errorMsg.textContent = "";
     }
 
-    let total = qty * seatPrice;
+    const courseFee = seats * PRICE_PER_SEAT;
 
-    courseTotal.innerHTML = total + " Tk";
+    courseTotal.textContent = `${courseFee} Tk`;
 
-    if(total > discountLimit)
-    {
-        discountMsg.innerHTML =
-        "You are eligible for a special discount.";
-    }
-    else
-    {
-        discountMsg.innerHTML = "";
+    if (courseFee > DISCOUNT_LIMIT) {
+        discountMsg.textContent = "You are eligible for a special discount.";
+    } else {
+        discountMsg.textContent = "";
     }
 
-    let extraFee = parseInt(classType.value);
+    const extraFee = Number(classType.value);
 
-    let payable = total + extraFee;
-
-    finalAmount.innerHTML = payable + " Tk";
+    finalAmount.textContent = `${courseFee + extraFee} Tk`;
 }
 
-seatQty.addEventListener("input", calculateTotal);
+seatInput.addEventListener("input", calculateFee);
+classType.addEventListener("change", calculateFee);
 
-classType.addEventListener("change", calculateTotal);
-
-checkbox.addEventListener("change", function(){
-
-    if(checkbox.checked)
-    {
-        submitBtn.style.display="inline-block";
-    }
-    else
-    {
-        submitBtn.style.display="none";
-    }
-
+checkbox.addEventListener("change", () => {
+    submitBtn.style.display = checkbox.checked ? "block" : "none";
 });
 
-calculateTotal();
+calculateFee();
