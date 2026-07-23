@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Online Course Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Enrollment Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,63 +12,59 @@
     <h1>My Learning Portal</h1>
 </header>
 
-<main>
+<main class="container">
 
-    <!-- Left Fieldset -->
-    <fieldset>
+    <!-- Enrollment Panel -->
+    <fieldset class="card">
         <legend>Course Enrollment Panel</legend>
 
         <h2>JavaScript Basics</h2>
 
-        <p>Fee Per Seat:
+        <div class="info-row">
+            <span>Fee Per Seat</span>
             <strong>1000 Tk</strong>
-        </p>
+        </div>
 
-        <label>Number of Seats:</label>
-        <input type="number" id="seatQty" value="1" min="1">
+        <label for="seatQty">Number of Seats</label>
+        <input type="number" id="seatQty" min="1" value="1">
 
-        <p>Total Course Fee:
+        <div class="result">
+            <strong>Total Course Fee:</strong>
             <span id="courseTotal">1000 Tk</span>
-        </p>
+        </div>
 
         <p id="errorMsg" class="error"></p>
-
         <p id="discountMsg" class="discount"></p>
 
     </fieldset>
 
-
-    <!-- Right Fieldset -->
-    <fieldset>
-
+    <!-- Student Form -->
+    <fieldset class="card">
         <legend>Enrollment Details Form</legend>
 
-        <label>Full Name</label>
-        <input type="text" id="name">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName">
 
-        <label>Contact Email</label>
+        <label for="email">Contact Email</label>
         <input type="email" id="email">
 
-        <label>Class Type</label>
-
+        <label for="classType">Course Mode</label>
         <select id="classType">
-            <option value="100">Online Class</option>
-            <option value="250">On-Campus Class</option>
+            <option value="100">Online Class (+100 Tk)</option>
+            <option value="250">On-Campus Class (+250 Tk)</option>
         </select>
 
-        <h3>
-            Final Payable Amount:
+        <div class="result">
+            <strong>Final Payable Amount:</strong>
             <span id="finalAmount">1100 Tk</span>
-        </h3>
+        </div>
 
-        <label>
+        <label class="checkbox">
             <input type="checkbox" id="confirm">
-            I confirm my enrollment details are correct
+            I confirm my enrollment details are correct.
         </label>
 
-        <br><br>
-
-        <button id="submitBtn">Submit</button>
+        <button id="submitBtn">Submit Enrollment</button>
 
     </fieldset>
 
